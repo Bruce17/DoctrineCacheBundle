@@ -9,9 +9,9 @@ php:
     - 7.0
     - 7.1
     - stable
-    - nighlty
+    - nightly
     - hhvm
-    - hhvm-nighlty
+    - hhvm-nightly
 
 services:
     - riak
