@@ -7,4 +7,11 @@ if [ "$TRAVIS_PHP_VERSION" = "hhvm" ]; then
 fi
 
 pecl install riak
-phpenv config-add $BASEDIR/php.ini
+
+if [ "$TRAVIS_PHP_VERSION" ~= '7\.\d+' ]; then
+    pecl install mongo
+
+    phpenv config-add $BASEDIR/php7.ini
+else
+    phpenv config-add $BASEDIR/php.ini
+fi
