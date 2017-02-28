@@ -34,9 +34,9 @@ after_script:
 
 matrix:
     allow_failures:
-        - php: nighlty
+        - php: nightly
         - php: hhvm
-        - php: hhvm-nighlty
+        - php: hhvm-nightly
     include:
         - php: 5.6
           env: DEPS="dev"
